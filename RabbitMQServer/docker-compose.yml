@@ -1,4 +1,4 @@
-version: 'v2022-11-17.0.1'
+version: 'v3.8'
 services:
   rabbitmq:
     image: rabbitmq:3.11-management
