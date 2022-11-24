@@ -1,0 +1,13 @@
+version: 'v2022-11-17.0.1'
+services:
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    hostname: ceis.rabbitmq
+    container_name: ceisrabbitmq
+    ports:
+      - "15673:15672"
+      - "5673:5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=123123
+    restart: always
