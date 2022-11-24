@@ -5,8 +5,8 @@ services:
     hostname: ceis.rabbitmq
     container_name: ceisrabbitmq
     ports:
-      - "15673:15672"
-      - "5673:5672"
+      - "15672:15672"
+      - "5672:5672"
     environment:
       - RABBITMQ_DEFAULT_USER=root
       - RABBITMQ_DEFAULT_PASS=123123
