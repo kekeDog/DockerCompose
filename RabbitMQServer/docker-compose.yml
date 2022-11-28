@@ -2,6 +2,8 @@ version: '3.8'
 services:
   rabbitmq:
     image: rabbitmq:3.11-management
+    build:
+      dockerfile: ./RabbitMQ.dockerfile
     hostname: ceis.rabbitmq
     container_name: ceisrabbitmq
     ports:
