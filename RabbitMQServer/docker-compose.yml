@@ -15,5 +15,5 @@ services:
       - RABBITMQ_DEFAULT_PASS=123123
     restart: always
     volumes:
+      - "./rabbitmq_delayed_message_exchange-3.11.1.ez:/plugins/rabbitmq_delayed_message_exchange-3.11.1.ez"
       - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
-      # - "./rabbitmq_delayed_message_exchange-3.11.1.ez:/opt/rabbitmq/plugins"
