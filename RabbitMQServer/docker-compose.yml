@@ -2,8 +2,6 @@ version: '3.8'
 services:
   rabbitmq:
     image: rabbitmq:3.11-management
-    build:
-      context: .
     hostname: ceis.rabbitmq
     container_name: ceisrabbitmq
     ports:
@@ -16,3 +14,5 @@ services:
       - RABBITMQ_DEFAULT_USER=root
       - RABBITMQ_DEFAULT_PASS=123123
     restart: always
+    volumes:
+      - "./rabbit_enabled_plugins:/etc/rabbitmq/enabled_plugins"
