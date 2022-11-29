@@ -15,4 +15,4 @@ services:
       - RABBITMQ_DEFAULT_PASS=123123
     restart: always
     volumes:
-      - "./rabbit_enabled_plugins:/etc/rabbitmq/enabled_plugins"
+      - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
