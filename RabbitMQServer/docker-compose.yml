@@ -16,4 +16,5 @@ services:
     restart: always
     volumes:
       - "./rabbitmq_delayed_message_exchange-3.11.1.ez:/plugins/rabbitmq_delayed_message_exchange-3.11.1.ez"
+      - "./advanced.config:/etc/rabbitmq/conf.d/advanced.config"
       - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
