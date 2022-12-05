@@ -10,6 +10,7 @@ services:
       - "15671:15671"
       - "15674:15674"
       - "15675:15675"
+      - "15670:15670"
     environment:
       - RABBITMQ_DEFAULT_USER=root
       - RABBITMQ_DEFAULT_PASS=123123
