@@ -14,8 +14,11 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=root
       - RABBITMQ_DEFAULT_PASS=123123
+      - RABBITMQ_CONFIG_FILE=/etc/rabbitmq/conf.d/10-defaults.conf
+      - RABBITMQ_ADVANCED_CONFIG_FILE=/etc/rabbitmq/conf.d/advanced.config
     restart: always
     volumes:
       - "./rabbitmq_delayed_message_exchange-3.11.1.ez:/plugins/rabbitmq_delayed_message_exchange-3.11.1.ez"
+      - "./10-defaults.conf:/etc/rabbitmq/conf.d/10-defaults.conf"
       - "./advanced.config:/etc/rabbitmq/conf.d/advanced.config"
       - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
